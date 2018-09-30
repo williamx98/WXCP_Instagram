@@ -1,0 +1,6 @@
+framework module Pods_WXCP_Instagram {
+  umbrella header "Pods-WXCP_Instagram-umbrella.h"
+
+  export *
+  module * { export * }
+}

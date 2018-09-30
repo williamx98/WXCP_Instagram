@@ -1,0 +1,6 @@
+framework module Pods_WXCP_InstagramUITests {
+  umbrella header "Pods-WXCP_InstagramUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
