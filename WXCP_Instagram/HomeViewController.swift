@@ -38,11 +38,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let query = Post.query()
         query?.includeKey("author")
         query?.limit = 20
-        
+        query?.addDescendingOrder("createdAt")
         query?.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
             if let posts = posts {
                 self.posts = posts as! [Post]
-                self.posts = self.posts.reversed()
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 if (posts.count == 0) {
