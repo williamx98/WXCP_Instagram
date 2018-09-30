@@ -32,10 +32,8 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("user not found")
-                let alertController = UIAlertController(title: "User not found", message:
-                    "Please check the username for errors", preferredStyle: UIAlertControllerStyle.alert)
+                let alertController = UIAlertController(title: error?.localizedDescription, message:"", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                
                 self.present(alertController, animated: true, completion: nil)
             }
         }
