@@ -19,7 +19,7 @@ The following **stretch** features are implemented:
 
 - [ ] Style the login page to look like the real Instagram login page (+1pt)
 - [ ] Style the feed to look like the real Instagram feed (+1pt)
-- [ ] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs for Home Feed and Profile (+2pt)
+- [x] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs for Home Feed and Profile (+2pt)
 - [ ] Add a custom camera using the CameraManager library (+1pt)
 - [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling (+2pt)
 - [x] Show the username and creation time for each post using section headers (+1pt)
@@ -36,9 +36,8 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Alert for no posts found
+- [x] Alert for no posts found/alert for user not found
 - [x] dynamic post height for longer captions
-- [x] alert for user not found
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 

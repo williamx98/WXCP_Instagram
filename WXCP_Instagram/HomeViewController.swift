@@ -17,6 +17,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let headerViewIdentifier = "headerViewIdentifier"
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = PFUser.current()?.username
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -98,13 +100,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: headerViewIdentifier) as! UITableViewHeaderFooterView
-        print(section)
         let post = self.posts[section]
         let postTime = post.createdAt
         let formatter = DateFormatter()
         formatter.dateFormat = "MM.dd.yyyy hh:mm"
         let date = formatter.string(from: postTime ?? Date())
-        print(date)
         header.textLabel?.text = (post.author.username ?? "user") + "    " + date
         return header
     }
